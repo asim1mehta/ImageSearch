@@ -9,7 +9,7 @@
 import Foundation
 
 protocol SearchResult {
-    var id: String {get}
-    var previewURL: String {get}
-    var fullScreenURL: String {get}
+    var uId: String {get}
+    var thumbnailURL: URL? {get}
+    var fullScreenURL: URL? {get}
 }

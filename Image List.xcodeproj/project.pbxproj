@@ -20,8 +20,20 @@
 		6466021725D90528008132FA /* Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6466021625D90528008132FA /* Key.swift */; };
 		6466021925D9054F008132FA /* ServerAPIs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6466021825D9054F008132FA /* ServerAPIs.swift */; };
 		6466021B25D90A09008132FA /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6466021A25D90A09008132FA /* SearchResult.swift */; };
-		6466021F25D91387008132FA /* SearchImagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6466021E25D91387008132FA /* SearchImagesViewController.swift */; };
+		6466021F25D91387008132FA /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6466021E25D91387008132FA /* SearchViewController.swift */; };
 		6466022125D915B2008132FA /* HTTPClient+Query.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6466022025D915B2008132FA /* HTTPClient+Query.swift */; };
+		6466022325D91DD4008132FA /* CancelableTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6466022225D91DD4008132FA /* CancelableTask.swift */; };
+		6466022525D91EBD008132FA /* URLSessionDataTask+CancelableTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6466022425D91EBD008132FA /* URLSessionDataTask+CancelableTask.swift */; };
+		6466022825D92A18008132FA /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6466022725D92A18008132FA /* ImageCollectionViewCell.swift */; };
+		64D5FFD025D92F3200B2F552 /* SearchResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D5FFCE25D92F3200B2F552 /* SearchResultViewController.swift */; };
+		64D5FFD125D92F3200B2F552 /* SearchResultViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64D5FFCF25D92F3200B2F552 /* SearchResultViewController.xib */; };
+		64D5FFDD25D9326100B2F552 /* ImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64D5FFDC25D9326100B2F552 /* ImageCollectionViewCell.xib */; };
+		64D5FFE225D9510900B2F552 /* SearchViewController+Suggestions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D5FFE125D9510900B2F552 /* SearchViewController+Suggestions.swift */; };
+		64D5FFE625D9527500B2F552 /* RecentSearchStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D5FFE525D9527500B2F552 /* RecentSearchStore.swift */; };
+		64D5FFEA25D9550600B2F552 /* LocalDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D5FFE925D9550600B2F552 /* LocalDataStore.swift */; };
+		64D5FFF025D9557D00B2F552 /* SearchQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D5FFEF25D9557D00B2F552 /* SearchQuery.swift */; };
+		64D5FFF425D95FAB00B2F552 /* SearchInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D5FFF325D95FAB00B2F552 /* SearchInteractor.swift */; };
+		64D5FFFC25D969B500B2F552 /* UIAlertController+TypeMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D5FFFB25D969B500B2F552 /* UIAlertController+TypeMethods.swift */; };
 		B5E93175F1959C2AF16D2829 /* Pods_Image_ListTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B30416ACB9267EE9AAA34C6E /* Pods_Image_ListTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -53,8 +65,20 @@
 		6466021625D90528008132FA /* Key.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Key.swift; sourceTree = "<group>"; };
 		6466021825D9054F008132FA /* ServerAPIs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerAPIs.swift; sourceTree = "<group>"; };
 		6466021A25D90A09008132FA /* SearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
-		6466021E25D91387008132FA /* SearchImagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchImagesViewController.swift; sourceTree = "<group>"; };
+		6466021E25D91387008132FA /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		6466022025D915B2008132FA /* HTTPClient+Query.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HTTPClient+Query.swift"; sourceTree = "<group>"; };
+		6466022225D91DD4008132FA /* CancelableTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelableTask.swift; sourceTree = "<group>"; };
+		6466022425D91EBD008132FA /* URLSessionDataTask+CancelableTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSessionDataTask+CancelableTask.swift"; sourceTree = "<group>"; };
+		6466022725D92A18008132FA /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		64D5FFCE25D92F3200B2F552 /* SearchResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultViewController.swift; sourceTree = "<group>"; };
+		64D5FFCF25D92F3200B2F552 /* SearchResultViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchResultViewController.xib; sourceTree = "<group>"; };
+		64D5FFDC25D9326100B2F552 /* ImageCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageCollectionViewCell.xib; sourceTree = "<group>"; };
+		64D5FFE125D9510900B2F552 /* SearchViewController+Suggestions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchViewController+Suggestions.swift"; sourceTree = "<group>"; };
+		64D5FFE525D9527500B2F552 /* RecentSearchStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentSearchStore.swift; sourceTree = "<group>"; };
+		64D5FFE925D9550600B2F552 /* LocalDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDataStore.swift; sourceTree = "<group>"; };
+		64D5FFEF25D9557D00B2F552 /* SearchQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchQuery.swift; sourceTree = "<group>"; };
+		64D5FFF325D95FAB00B2F552 /* SearchInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchInteractor.swift; sourceTree = "<group>"; };
+		64D5FFFB25D969B500B2F552 /* UIAlertController+TypeMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController+TypeMethods.swift"; sourceTree = "<group>"; };
 		669E793AA15C7D477D3B4508 /* Pods-Image ListTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Image ListTests.release.xcconfig"; path = "Target Support Files/Pods-Image ListTests/Pods-Image ListTests.release.xcconfig"; sourceTree = "<group>"; };
 		870E4D61395E6CB228D273C8 /* Pods-Image List.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Image List.release.xcconfig"; path = "Target Support Files/Pods-Image List/Pods-Image List.release.xcconfig"; sourceTree = "<group>"; };
 		8E4F3598AF6238DDB597D450 /* Pods-Image List.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Image List.debug.xcconfig"; path = "Target Support Files/Pods-Image List/Pods-Image List.debug.xcconfig"; sourceTree = "<group>"; };
@@ -118,6 +142,7 @@
 			children = (
 				6466021525D9051A008132FA /* Constants */,
 				6466020D25D8F49C008132FA /* Models */,
+				64D5FFD925D92FA600B2F552 /* Views */,
 				6466020A25D8F461008132FA /* ViewControllers */,
 				6466020725D8F3F9008132FA /* Helpers */,
 				6466021225D9033B008132FA /* Extensions */,
@@ -145,6 +170,7 @@
 			children = (
 				6466020825D8F40E008132FA /* HTTPClient.swift */,
 				6466022025D915B2008132FA /* HTTPClient+Query.swift */,
+				64D5FFE925D9550600B2F552 /* LocalDataStore.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -152,7 +178,8 @@
 		6466020A25D8F461008132FA /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				6466021E25D91387008132FA /* SearchImagesViewController.swift */,
+				64D5FFCD25D92ED300B2F552 /* SearchResultViewController */,
+				6466022625D929D1008132FA /* SearchViewController */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -162,6 +189,9 @@
 			children = (
 				6466020E25D8FF95008132FA /* Image.swift */,
 				6466021A25D90A09008132FA /* SearchResult.swift */,
+				6466022225D91DD4008132FA /* CancelableTask.swift */,
+				64D5FFE525D9527500B2F552 /* RecentSearchStore.swift */,
+				64D5FFEF25D9557D00B2F552 /* SearchQuery.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -170,6 +200,8 @@
 			isa = PBXGroup;
 			children = (
 				6466021325D90366008132FA /* Image+DataFetching.swift */,
+				6466022425D91EBD008132FA /* URLSessionDataTask+CancelableTask.swift */,
+				64D5FFFB25D969B500B2F552 /* UIAlertController+TypeMethods.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -181,6 +213,42 @@
 				6466021825D9054F008132FA /* ServerAPIs.swift */,
 			);
 			path = Constants;
+			sourceTree = "<group>";
+		};
+		6466022625D929D1008132FA /* SearchViewController */ = {
+			isa = PBXGroup;
+			children = (
+				6466021E25D91387008132FA /* SearchViewController.swift */,
+				64D5FFE125D9510900B2F552 /* SearchViewController+Suggestions.swift */,
+				64D5FFF325D95FAB00B2F552 /* SearchInteractor.swift */,
+			);
+			path = SearchViewController;
+			sourceTree = "<group>";
+		};
+		64D5FFCD25D92ED300B2F552 /* SearchResultViewController */ = {
+			isa = PBXGroup;
+			children = (
+				64D5FFCE25D92F3200B2F552 /* SearchResultViewController.swift */,
+				64D5FFCF25D92F3200B2F552 /* SearchResultViewController.xib */,
+			);
+			path = SearchResultViewController;
+			sourceTree = "<group>";
+		};
+		64D5FFD425D92F6800B2F552 /* ImageCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				6466022725D92A18008132FA /* ImageCollectionViewCell.swift */,
+				64D5FFDC25D9326100B2F552 /* ImageCollectionViewCell.xib */,
+			);
+			path = ImageCollectionViewCell;
+			sourceTree = "<group>";
+		};
+		64D5FFD925D92FA600B2F552 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				64D5FFD425D92F6800B2F552 /* ImageCollectionViewCell */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		9DD8E077286C464BD76995BB /* Frameworks */ = {
@@ -279,6 +347,8 @@
 				646601F225D8F21E008132FA /* LaunchScreen.storyboard in Resources */,
 				646601EF25D8F21E008132FA /* Assets.xcassets in Resources */,
 				646601ED25D8F21D008132FA /* Main.storyboard in Resources */,
+				64D5FFD125D92F3200B2F552 /* SearchResultViewController.xib in Resources */,
+				64D5FFDD25D9326100B2F552 /* ImageCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,13 +432,23 @@
 			files = (
 				6466021725D90528008132FA /* Key.swift in Sources */,
 				646601E625D8F21D008132FA /* AppDelegate.swift in Sources */,
+				64D5FFF425D95FAB00B2F552 /* SearchInteractor.swift in Sources */,
+				64D5FFFC25D969B500B2F552 /* UIAlertController+TypeMethods.swift in Sources */,
 				6466021425D90366008132FA /* Image+DataFetching.swift in Sources */,
 				6466021B25D90A09008132FA /* SearchResult.swift in Sources */,
+				64D5FFE225D9510900B2F552 /* SearchViewController+Suggestions.swift in Sources */,
 				6466020925D8F40E008132FA /* HTTPClient.swift in Sources */,
+				6466022525D91EBD008132FA /* URLSessionDataTask+CancelableTask.swift in Sources */,
+				64D5FFEA25D9550600B2F552 /* LocalDataStore.swift in Sources */,
+				64D5FFF025D9557D00B2F552 /* SearchQuery.swift in Sources */,
 				6466022125D915B2008132FA /* HTTPClient+Query.swift in Sources */,
 				646601E825D8F21D008132FA /* SceneDelegate.swift in Sources */,
-				6466021F25D91387008132FA /* SearchImagesViewController.swift in Sources */,
+				64D5FFD025D92F3200B2F552 /* SearchResultViewController.swift in Sources */,
+				6466021F25D91387008132FA /* SearchViewController.swift in Sources */,
+				6466022825D92A18008132FA /* ImageCollectionViewCell.swift in Sources */,
 				6466020F25D8FF95008132FA /* Image.swift in Sources */,
+				6466022325D91DD4008132FA /* CancelableTask.swift in Sources */,
+				64D5FFE625D9527500B2F552 /* RecentSearchStore.swift in Sources */,
 				6466021925D9054F008132FA /* ServerAPIs.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -16,7 +16,7 @@ struct Image: Codable {
     let previewWidth, previewHeight: Int
     let webformatURL: String
     let webformatWidth, webformatHeight: Int
-    let largeImageURL, fullHDURL, imageURL: String
+    let largeImageURL: String
     let imageWidth, imageHeight, imageSize, views: Int
     let downloads, favorites, likes, comments: Int
     let userID: Int
@@ -24,10 +24,23 @@ struct Image: Codable {
     let userImageURL: String
 
     enum CodingKeys: String, CodingKey {
-        case id, pageURL, type, tags, previewURL, previewWidth, previewHeight, webformatURL, webformatWidth, webformatHeight, largeImageURL, fullHDURL, imageURL, imageWidth, imageHeight, imageSize, views, downloads, favorites, likes, comments
+        case id, pageURL, type, tags, previewURL, previewWidth, previewHeight, webformatURL, webformatWidth, webformatHeight, largeImageURL, imageWidth, imageHeight, imageSize, views, downloads, favorites, likes, comments
         case userID = "user_id"
         case user, userImageURL
     }
 }
 
+extension Image: SearchResult {
+    var uId: String {
+        return id.description
+    }
+    
+    var thumbnailURL: URL? {
+        return URL(string: previewURL)
+    }
+    
+    var fullScreenURL: URL? {
+        return URL(string: largeImageURL)
+    }    
+}
 
