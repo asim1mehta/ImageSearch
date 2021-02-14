@@ -17,4 +17,16 @@ class ImageCollectionViewCell: UICollectionViewCell {
     func setImageWith(url: URL?) {
         imageView.kf.setImage(with: url, placeholder: UIImage(named: "placeholderImg"))
     }
+    
+    func setImageWith(previewURL: URL?, fullScreenURL: URL?) {
+        var placeholder: UIImage?
+        if let imageKey = previewURL?.absoluteString,ImageCache.default.isCached(forKey: imageKey) {
+            placeholder = ImageCache.default.retrieveImageInMemoryCache(forKey: imageKey)
+        }
+        
+        imageView.kf.setImage(with: fullScreenURL, placeholder: placeholder)
+        
+        imageView.contentMode = .scaleAspectFit
+        imageView.backgroundColor = .black
+    }
 }

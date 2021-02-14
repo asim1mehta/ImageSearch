@@ -43,10 +43,15 @@ class SearchViewController: UIViewController {
     }
     
     func setupSearchController() {
-        let resultController = SearchResultViewController()
-        resultController.searchInteractor = searchIntractor
-        
+        let resultController = createSearchResultViewController()
         let searchController = UISearchController(searchResultsController: resultController)
+        configure(searchController: searchController)
+        
+        navigationItem.hidesSearchBarWhenScrolling = false
+        navigationItem.searchController = searchController
+    }
+    
+    func configure(searchController: UISearchController) {
         searchController.automaticallyShowsCancelButton = true
         searchController.showsSearchResultsController = false
         searchController.obscuresBackgroundDuringPresentation = false
@@ -54,9 +59,13 @@ class SearchViewController: UIViewController {
         searchController.searchBar.delegate = self
         searchController.searchBar.returnKeyType = .search
         searchController.searchBar.searchTextField.placeholder = "Enter a keyword"
-        
-        navigationItem.hidesSearchBarWhenScrolling = false
-        navigationItem.searchController = searchController
+    }
+    
+    func createSearchResultViewController() -> SearchResultViewController {
+        let vc = SearchResultViewController()
+        vc.searchInteractor = searchIntractor
+        vc.delegate = self
+        return vc
     }
     
     func search(query: SearchQuery) {
@@ -150,6 +159,14 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return "Recent Searches"
+    }
+}
+
+// MARK: - SearchResultViewControllerDelegate
+extension SearchViewController: SearchResultViewControllerDelegate {
+    func openFullScreenWith(searchResults: [SearchResult], itemToOpenIntially: Int) {
+        let vc = FullScreenImageCollectionViewController.new(withSearchResults: searchResults, itemToOpenIntially: itemToOpenIntially)
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
 

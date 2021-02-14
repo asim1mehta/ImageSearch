@@ -8,11 +8,17 @@
 
 import UIKit
 
+protocol SearchResultViewControllerDelegate: class {
+    func openFullScreenWith(searchResults: [SearchResult], itemToOpenIntially: Int)
+}
+
 class SearchResultViewController: UIViewController {
     
     // MARK: - Properties
     var searchResults = [SearchResult]()
     var searchInteractor: SearchInteractor?
+    
+    weak var delegate: SearchResultViewControllerDelegate?
     
     // MARK: - IBOutlets
     @IBOutlet weak var collectionView: UICollectionView!
@@ -84,5 +90,9 @@ extension SearchResultViewController: UICollectionViewDataSource, UICollectionVi
         if indexPath.item == searchResults.count - 1 {
             reachedAtLastCell()
         }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        delegate?.openFullScreenWith(searchResults: searchResults, itemToOpenIntially: indexPath.item)
     }
 }
