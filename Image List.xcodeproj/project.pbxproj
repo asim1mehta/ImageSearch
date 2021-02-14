@@ -25,6 +25,7 @@
 		6466022325D91DD4008132FA /* CancelableTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6466022225D91DD4008132FA /* CancelableTask.swift */; };
 		6466022525D91EBD008132FA /* URLSessionDataTask+CancelableTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6466022425D91EBD008132FA /* URLSessionDataTask+CancelableTask.swift */; };
 		6466022825D92A18008132FA /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6466022725D92A18008132FA /* ImageCollectionViewCell.swift */; };
+		647CFF4425D994A60067A714 /* NextPageFetchable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647CFF4325D994A60067A714 /* NextPageFetchable.swift */; };
 		64D5FFD025D92F3200B2F552 /* SearchResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D5FFCE25D92F3200B2F552 /* SearchResultViewController.swift */; };
 		64D5FFD125D92F3200B2F552 /* SearchResultViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64D5FFCF25D92F3200B2F552 /* SearchResultViewController.xib */; };
 		64D5FFDD25D9326100B2F552 /* ImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64D5FFDC25D9326100B2F552 /* ImageCollectionViewCell.xib */; };
@@ -70,6 +71,7 @@
 		6466022225D91DD4008132FA /* CancelableTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelableTask.swift; sourceTree = "<group>"; };
 		6466022425D91EBD008132FA /* URLSessionDataTask+CancelableTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSessionDataTask+CancelableTask.swift"; sourceTree = "<group>"; };
 		6466022725D92A18008132FA /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		647CFF4325D994A60067A714 /* NextPageFetchable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextPageFetchable.swift; sourceTree = "<group>"; };
 		64D5FFCE25D92F3200B2F552 /* SearchResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultViewController.swift; sourceTree = "<group>"; };
 		64D5FFCF25D92F3200B2F552 /* SearchResultViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchResultViewController.xib; sourceTree = "<group>"; };
 		64D5FFDC25D9326100B2F552 /* ImageCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -192,6 +194,7 @@
 				6466022225D91DD4008132FA /* CancelableTask.swift */,
 				64D5FFE525D9527500B2F552 /* RecentSearchStore.swift */,
 				64D5FFEF25D9557D00B2F552 /* SearchQuery.swift */,
+				647CFF4325D994A60067A714 /* NextPageFetchable.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -432,6 +435,7 @@
 			files = (
 				6466021725D90528008132FA /* Key.swift in Sources */,
 				646601E625D8F21D008132FA /* AppDelegate.swift in Sources */,
+				647CFF4425D994A60067A714 /* NextPageFetchable.swift in Sources */,
 				64D5FFF425D95FAB00B2F552 /* SearchInteractor.swift in Sources */,
 				64D5FFFC25D969B500B2F552 /* UIAlertController+TypeMethods.swift in Sources */,
 				6466021425D90366008132FA /* Image+DataFetching.swift in Sources */,

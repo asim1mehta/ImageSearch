@@ -12,6 +12,7 @@ class SearchResultViewController: UIViewController {
     
     // MARK: - Properties
     var searchResults = [SearchResult]()
+    var searchInteractor: SearchInteractor?
     
     // MARK: - IBOutlets
     @IBOutlet weak var collectionView: UICollectionView!
@@ -39,6 +40,25 @@ class SearchResultViewController: UIViewController {
         searchResults = results
         collectionView.reloadData()
     }
+    
+    fileprivate func reachedAtLastCell() {
+        guard searchResults.count != 0, searchInteractor?.canFetchNextPage(currentDataSize: searchResults.count) == true else {
+            return
+        }
+        
+        fetchNextPage()
+    }
+    
+    fileprivate func fetchNextPage() {
+        searchInteractor?.fetchNextPage(completion: { [weak self] (results, errorMessage) in
+            guard errorMessage == nil else {
+                return
+            }
+            
+            self?.searchResults.append(contentsOf: results)
+            self?.collectionView.reloadData()
+        })
+    }
 
 }
 
@@ -61,6 +81,8 @@ extension SearchResultViewController: UICollectionViewDataSource, UICollectionVi
     }
     
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-        
+        if indexPath.item == searchResults.count - 1 {
+            reachedAtLastCell()
+        }
     }
 }

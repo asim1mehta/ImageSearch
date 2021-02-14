@@ -43,7 +43,10 @@ class SearchViewController: UIViewController {
     }
     
     func setupSearchController() {
-        let searchController = UISearchController(searchResultsController: SearchResultViewController())
+        let resultController = SearchResultViewController()
+        resultController.searchInteractor = searchIntractor
+        
+        let searchController = UISearchController(searchResultsController: resultController)
         searchController.automaticallyShowsCancelButton = true
         searchController.showsSearchResultsController = false
         searchController.obscuresBackgroundDuringPresentation = false
@@ -92,7 +95,6 @@ class SearchViewController: UIViewController {
         activityIndicator.stopAnimating()
         activityIndicator.isHidden = true
     }
-    
 }
 
 
@@ -142,6 +144,7 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
         let query = recentSearches[indexPath.row]
         search(query: query)
         
+        searchController?.searchBar.text = query.keyword
         searchController?.searchBar.resignFirstResponder()
     }
     

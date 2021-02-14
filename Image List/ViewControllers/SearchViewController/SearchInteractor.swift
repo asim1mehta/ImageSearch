@@ -8,13 +8,19 @@
 
 import Foundation
 
-class SearchInteractor {
+class SearchInteractor: NextPageFetchable {
+    
+    // MARK: - Properties
+    ///Latest Search Results Fetching Task
     private var searchTask: CancelableTask?
     
     private var page = 1
     private var currentQuery: SearchQuery!
     private var totalResultsAvailabeleForCurrentQuery: Int?
     
+    private(set) var isFetchingListDataInProgress: Bool = false
+    
+    // MARK: - Methods
     func performNewSearchFor(query: SearchQuery, completion: @escaping ([SearchResult], String?) -> Void) {
         page = 1
         currentQuery = query
@@ -25,14 +31,39 @@ class SearchInteractor {
         performSearch(request: request, completion: completion)
     }
     
+    func fetchNextPage(completion: @escaping ([SearchResult], String?) -> Void ) {
+        let request = Image.FetchingRequest(query: currentQuery.keyword, page: page + 1)
+        
+        performSearch(request: request) { [weak self] (result, errorMessage) in
+            if errorMessage == nil {
+                self?.page += 1
+            }
+            completion(result, errorMessage)
+        }
+    }
+    
+    func isMoreDataAvailableForFetching(currentDataSize: Int) -> Bool {
+        guard let total = totalResultsAvailabeleForCurrentQuery else {
+            return false
+        }
+        
+        return total > currentDataSize
+    }
+    
     func cancelLastSearch() {
         searchTask?.cancel()
         searchTask = nil
     }
     
+    // MARK: - Private Methods
     private func performSearch(request: Image.FetchingRequest, completion: @escaping ([SearchResult], String?) -> Void) {
         searchTask?.cancel()
+        
+        isFetchingListDataInProgress = true
+        
         searchTask = Image.fetchWith(request: request) { [weak self] (response) in
+            self?.isFetchingListDataInProgress = false
+            
             guard response.isSuccessful else {
                 completion([], response.errorMessage)
                 return
