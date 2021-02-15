@@ -66,11 +66,11 @@
         <!--Full Screen Image Collection View Controller-->
         <scene sceneID="mWC-LT-mmi">
             <objects>
-                <collectionViewController storyboardIdentifier="FullScreenImageCollectionViewController" id="Zc3-LL-uiZ" customClass="FullScreenImageCollectionViewController" customModule="Image_List" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController storyboardIdentifier="FullScreenImageCollectionViewController" automaticallyAdjustsScrollViewInsets="NO" id="Zc3-LL-uiZ" customClass="FullScreenImageCollectionViewController" customModule="Image_List" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsVerticalScrollIndicator="NO" dataMode="prototypes" id="sto-nn-rnP">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="4ml-jw-fli">
                             <size key="itemSize" width="128" height="128"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>

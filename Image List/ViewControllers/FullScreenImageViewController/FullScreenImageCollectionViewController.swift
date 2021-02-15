@@ -14,6 +14,15 @@ class FullScreenImageCollectionViewController: UICollectionViewController, UICol
     var searchResults = [SearchResult]()
     
     var itemToOpenIntially = 0
+    
+    override var prefersStatusBarHidden: Bool {
+        return navigationController?.navigationBar.isHidden == true
+    }
+    
+    override var preferredStatusBarUpdateAnimation: UIStatusBarAnimation {
+        return .slide
+    }
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +36,7 @@ class FullScreenImageCollectionViewController: UICollectionViewController, UICol
         let nib = UINib(nibName: "ImageCollectionViewCell", bundle: nil)
         collectionView.register(nib, forCellWithReuseIdentifier: ImageCollectionViewCell.reuseIdentifier)
     }
+    
 
 
     // MARK: UICollectionViewDataSource
@@ -44,6 +54,10 @@ class FullScreenImageCollectionViewController: UICollectionViewController, UICol
     }
 
     // MARK: UICollectionViewDelegate
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let isNavBarHidden = navigationController?.navigationBar.isHidden == true
+        navigationController?.setNavigationBarHidden(!isNavBarHidden, animated: true)
+    }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return collectionView.bounds.size
