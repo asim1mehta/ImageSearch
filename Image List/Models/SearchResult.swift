@@ -8,6 +8,7 @@
 
 import Foundation
 
+///SearchResult: Protocol to give abstraction to search results
 protocol SearchResult {
     var uId: String {get}
     var thumbnailURL: URL? {get}

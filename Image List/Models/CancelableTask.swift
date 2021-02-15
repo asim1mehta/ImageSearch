@@ -8,6 +8,7 @@
 
 import Foundation
 
+/// Provides abstraction for Tasks which are created to fetch Data for example: 'URLSessionDataTask'
 protocol CancelableTask {
     func cancel()
 }

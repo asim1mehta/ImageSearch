@@ -8,7 +8,7 @@
 
 import Foundation
 
-
+/// RecentSearchStore: Static class which handles business logic for storing recent searches
 class RecentSearchStore {
     private static let maxCapacity = 10
     private static let storeKey = "com.imageList.searchQueries"

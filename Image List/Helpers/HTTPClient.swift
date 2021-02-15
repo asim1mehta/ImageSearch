@@ -8,6 +8,7 @@
 
 import Foundation
 
+///HTTPClient: Handles Network connections
 class HTTPClient {
     
     private static let timeoutInterval: TimeInterval = 30
@@ -36,6 +37,10 @@ class HTTPClient {
                 }
             } catch {
                 print(error.localizedDescription)
+                let serverResponse = Response<T>(data: nil, errorMessage: error.localizedDescription, status: (error as NSError).code)
+                DispatchQueue.main.async {
+                    completion(serverResponse)
+                }
             }
             
         }

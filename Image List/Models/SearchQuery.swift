@@ -8,6 +8,7 @@
 
 import Foundation
 
+///SearchQuery: Data Structure consisting a particular search query
 struct SearchQuery: Codable {
     let keyword: String
 }

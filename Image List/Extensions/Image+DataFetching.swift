@@ -14,9 +14,6 @@ extension Image {
     static func fetchWith(request: FetchingRequest, completion: @escaping (ImageFetchResponse) -> Void) -> CancelableTask? {
         var params = request.getParams()
         params["key"] = Key.PixaBay.images
-        #if DEBUG
-            params["pretty"] = true
-        #endif
         
         let queryString = HTTPClient.queryString(from: params)
         

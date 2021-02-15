@@ -8,6 +8,7 @@
 
 import Foundation
 
+/// NextPageFetchable: Provides a blueprint for implementing Pagination functionality
 protocol NextPageFetchable {
     var isFetchingListDataInProgress: Bool { get }
     

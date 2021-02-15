@@ -8,12 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		5897A5B0976CB295BDC103D6 /* Pods_Image_List.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E6DEF4C7BC7B20580DC2191 /* Pods_Image_List.framework */; };
+		64248A4825DA465100672EE9 /* LocalDataStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64248A4725DA465100672EE9 /* LocalDataStoreTests.swift */; };
 		646601E625D8F21D008132FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646601E525D8F21D008132FA /* AppDelegate.swift */; };
 		646601E825D8F21D008132FA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646601E725D8F21D008132FA /* SceneDelegate.swift */; };
 		646601ED25D8F21D008132FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 646601EB25D8F21D008132FA /* Main.storyboard */; };
 		646601EF25D8F21E008132FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 646601EE25D8F21E008132FA /* Assets.xcassets */; };
 		646601F225D8F21E008132FA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 646601F025D8F21E008132FA /* LaunchScreen.storyboard */; };
-		646601FD25D8F21E008132FA /* Image_ListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646601FC25D8F21E008132FA /* Image_ListTests.swift */; };
 		6466020925D8F40E008132FA /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6466020825D8F40E008132FA /* HTTPClient.swift */; };
 		6466020F25D8FF95008132FA /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6466020E25D8FF95008132FA /* Image.swift */; };
 		6466021425D90366008132FA /* Image+DataFetching.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6466021325D90366008132FA /* Image+DataFetching.swift */; };
@@ -51,6 +51,8 @@
 
 /* Begin PBXFileReference section */
 		1E6DEF4C7BC7B20580DC2191 /* Pods_Image_List.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Image_List.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		64248A4625DA465100672EE9 /* Image ListTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Image ListTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		64248A4725DA465100672EE9 /* LocalDataStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDataStoreTests.swift; sourceTree = "<group>"; };
 		646601E225D8F21D008132FA /* Image List.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Image List.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		646601E525D8F21D008132FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		646601E725D8F21D008132FA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,7 +61,6 @@
 		646601F125D8F21E008132FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		646601F325D8F21E008132FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		646601F825D8F21E008132FA /* Image ListTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Image ListTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		646601FC25D8F21E008132FA /* Image_ListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image_ListTests.swift; sourceTree = "<group>"; };
 		646601FE25D8F21E008132FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6466020825D8F40E008132FA /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 		6466020E25D8FF95008132FA /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
@@ -163,8 +164,9 @@
 		646601FB25D8F21E008132FA /* Image ListTests */ = {
 			isa = PBXGroup;
 			children = (
-				646601FC25D8F21E008132FA /* Image_ListTests.swift */,
 				646601FE25D8F21E008132FA /* Info.plist */,
+				64248A4725DA465100672EE9 /* LocalDataStoreTests.swift */,
+				64248A4625DA465100672EE9 /* Image ListTests-Bridging-Header.h */,
 			);
 			path = "Image ListTests";
 			sourceTree = "<group>";
@@ -330,6 +332,7 @@
 					};
 					646601F725D8F21E008132FA = {
 						CreatedOnToolsVersion = 11.7;
+						LastSwiftMigration = 1220;
 						TestTargetID = 646601E125D8F21D008132FA;
 					};
 				};
@@ -473,7 +476,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				646601FD25D8F21E008132FA /* Image_ListTests.swift in Sources */,
+				64248A4825DA465100672EE9 /* LocalDataStoreTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -665,6 +668,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Image ListTests/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
@@ -675,6 +679,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.asim.Image-ListTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Image ListTests/Image ListTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Image List.app/Image List";
@@ -687,6 +693,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Image ListTests/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
@@ -697,6 +704,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.asim.Image-ListTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Image ListTests/Image ListTests-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Image List.app/Image List";

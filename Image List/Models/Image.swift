@@ -30,6 +30,7 @@ struct Image: Codable {
     }
 }
 
+// MARK: - Search Result Confirmation
 extension Image: SearchResult {
     var uId: String {
         return id.description

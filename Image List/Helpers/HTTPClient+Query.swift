@@ -8,6 +8,7 @@
 
 import Foundation
 
+///HTTPClient+Query : Used to convert Dictionary to a queryString for URL encoding
 extension HTTPClient {
    private class func queryComponents(fromKey key: String, value: Any) -> [(String, String)] {
       var components: [(String, String)] = []
